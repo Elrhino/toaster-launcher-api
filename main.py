@@ -15,11 +15,11 @@
 # limitations under the License.
 #
 import webapp2
-
-class MainHandler(webapp2.RequestHandler):
-    def get(self):
-        self.response.write('Hello world!')
+from handlers.handlers import MainHandler, ToasterHandler, TutorialHandler
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler)
+    ('/', MainHandler),
+    ('/toaster', ToasterHandler),
+    ('/tutorial', TutorialHandler)
 ], debug=True)
+
