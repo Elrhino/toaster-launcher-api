@@ -1,6 +1,6 @@
 class Toaster(object):
 
-    def __init__(self, name=None, coordinates='000; 000; 000', thrust=1):
-        self.name = name
+    def __init__(self, coordinates='000; 000; 000', name=None, power=1):
         self.coordinates = coordinates
-        self.thrust = thrust
+        self.name = name
+        self.power = power
