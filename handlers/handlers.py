@@ -10,9 +10,11 @@ class RootHandler(webapp2.RequestHandler):
 
 class ToasterHandler(webapp2.RedirectHandler):
     def get(self):
+        self.response.headers.add_header("Access-Control-Allow-Origin", "*")
         self.response.write(toaster.get_response())
 
 
 class TutorialHandler(webapp2.RedirectHandler):
     def get(self):
+        self.response.headers.add_header("Access-Control-Allow-Origin", "*")
         self.response.write(tutorial.get_response())
