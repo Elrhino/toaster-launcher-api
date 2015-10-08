@@ -1,4 +1,5 @@
 import json
+
 from models.toaster import Toaster
 
 

@@ -15,6 +15,7 @@
 # limitations under the License.
 #
 import webapp2
+
 from handlers.handlers import RootHandler, ToasterHandler, TutorialHandler
 
 app = webapp2.WSGIApplication([
@@ -22,4 +23,3 @@ app = webapp2.WSGIApplication([
     ('/toaster', ToasterHandler),
     ('/tutorial', TutorialHandler)
 ], debug=True)
-
