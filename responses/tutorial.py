@@ -14,8 +14,8 @@ def get_response():
 
 
 def deserialize_array(array):
-    response = ""
+    response = "["
     for val in array:
         response += json.dumps(val.__dict__, sort_keys=True) + ","
 
-    return response[:-1]
+    return response[:-1] + "]"
